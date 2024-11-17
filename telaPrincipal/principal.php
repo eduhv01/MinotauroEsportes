@@ -58,7 +58,7 @@
         <div class="product-card">
             <img src="assets/img/produtos/trembolona.png" alt="Produto 3">
             <h3>Landerlan Drostanolona Trembolona Acetato</h3>
-            <p>é um poderoso esteroide anabolizante, frequentemente utilizado por atletas e bodybuilders que buscam aumento de força, massa muscular e desempenho em treinos intensos.</p>
+            <p>É um poderoso esteroide anabolizante, frequentemente utilizado por atletas e bodybuilders que buscam aumento de força, massa muscular e desempenho em treinos intensos.</p>
             <button class="buy-btn">Comprar Agora</button>
         </div>
         <div class="product-card">
