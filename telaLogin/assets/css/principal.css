@@ -11,6 +11,14 @@ body {
     line-height: 1.6;
 }
 
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+
 .cookie-banner {
     position: fixed;
     bottom: 0;
@@ -56,8 +64,8 @@ body {
 }
 
 .logo img {
-    margin-top: 48px;
-    height: 173px;
+    margin-top: -30px;
+    height: 100px;
     width: auto;
     max-height: 100%;
     object-fit: contain;
@@ -152,6 +160,60 @@ body {
 .nav-links li a:hover {
     color: #F21905;
 }
+
+
+.container {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.login {
+    text-align: center;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /
+}
+
+
+input {
+    display: block;
+    width: 100%;
+    margin: 10px 0;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    box-sizing: border-box;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    background-color: #F21905;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+button:hover {
+    background-color: #590902;
+}
+
+a {
+    display: inline-block;
+    margin-top: 15px;
+    color: #007BFF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
 
 .hero {
     text-align: center;
@@ -331,6 +393,7 @@ body {
 
 
 .footer {
+    bottom: 0;
     background-color: #0D0D0D;
     color: white;
     text-align: center;
