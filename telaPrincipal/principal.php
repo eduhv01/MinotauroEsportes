@@ -31,7 +31,7 @@
 
 <section class="hero">
     <div class="hero-overlay">
-        <img src="assets/img/etc/pexels-cesar-galeao-1673528-3253501.jpg" alt="Banner Image" class="hero-img">
+        <img src="assets/img/etc/cbum.jpg" alt="Banner Image" class="hero-img">
         <div class="hero-text">
             <h1>Bem-vindo à Minotauro Esportes!</h1>
             <p>Onde atletas de alta performance encontram o melhor para alcançar seus limites e ir além. Desperte o campeão dentro de você com nossa linha exclusiva de suplementos premium, projetados para nutrir, fortalecer e transformar seu treino em resultados extraordinários.</p>
