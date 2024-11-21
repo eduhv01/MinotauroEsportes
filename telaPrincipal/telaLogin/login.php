@@ -17,29 +17,27 @@
 <body>
     <nav class="navbar">
         <div class="logo">
-            <a href="index.php"><img src="assets/img/etc/logo2.png" alt="Logo da Minotauro Esportes"
+            <a href="principal.php"><img src="assets/img/etc/logo2.png" alt="Logo da Minotauro Esportes"
                     class="logo-img"></a>
         </div>
         <ul class="nav-links">
+            <i class="fa-solid fa-user-secret"></i>
             <li><a href="#">Perfil</a></li>
             <li><a href="#">Comprar</a></li>
-            <li><a href="#">Saiba Mais</a></li>
-            <li><a href="#">Contato</a></li>
-        </ul>
+            <li><a href="#fale-conosco">Contato</a></li>
+            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
+    </ul>
     </nav>
 
     <div class="container">
         <div class="login">
-            <h1>Cadastro</h1>
-            <form action="recebe_cadastro.php" method="post">
-                <input type="text" name="nome" id="nome" placeholder="Nome">
+            <h1>Login</h1>
+            <form action="recebe_login.php" method="post">
                 <input type="text" name="email" id="email" placeholder="Email">
-                <input type="text" name="telefone" id="telefone" placeholder="Telefone">
                 <input type="password" name="senha" id="senha" placeholder="Senha">
-                <input type="password" name="confirmar_senha" id="confirmar_senha" placeholder="Confirmar Senha">
-                <button type="submit">Cadastrar</button>
+                <button type="submit">Entrar</button>
             </form>
-            <a href="login.php">Já tem uma conta? Faça login</a>
+            <a href="cadastro.php">Não tem uma conta? Cadastre-se</a>
         </div>
     </div>
 

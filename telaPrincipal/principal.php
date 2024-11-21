@@ -8,57 +8,69 @@
     <link rel="stylesheet" href="assets/css/principal.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Funnel+Display:wght@300..800&family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 <body>
     <nav class="navbar">
     <div class="logo">
-        <a href="index.php"><img src="assets/img/etc/logo.png" alt="Logo da Minotauro Esportes" class="logo-img" ></a>
+        <a href="principal.php"><img src="assets/img/etc/logo.png" alt="Logo da Minotauro Esportes" class="logo-img" ></a>
+    </div>
+    <!-- Barra de pesquisa -->
+    <div class="search-container">
+        <input type="text" id="search-input" class="search-bar" placeholder="Encontre o suplemento ideal para você">
+        <ul id="suggestions-list" class="suggestions-list" style="display: none;">
+            <li>Whey</li>
+            <li>Creatina</li>
+            <li>Pre-treino</li>
+            <li>Esteroides</li>
+        </ul>
     </div>
     <ul class="nav-links">
+    <i class="fa-solid fa-user-secret"></i>
+        <li class="auth-link">
+            <div class="auth-container">
+                    <span class="register"><a href="telaLogin/cadastro.php">Cadastre-se </a></span>
+                    <span class="login"><a href="telaLogin/cadastro.php">ou faça seu login</a></span>
+            </div>
+        </li>
         <li><a href="#">Comprar</a></li>
-        <li><a href="#">Saiba Mais</a></li>
         <li><a href="#fale-conosco">Contato</a></li>
+        <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
     </ul>
-</nav>
+    </nav>
+    
+    <!-- Frase destaque -->
+    <section class="banner">
+        <h1>Alimente sua força, <span>conquiste sua vitória.</span></h1>
+        <img src="./assets/img/etc/cbumeramon1.png" alt="">
+    </section>
 
-<section class="hero">
-    <div class="hero-overlay">
-        <img src="assets/img/etc/cbumramon.png" alt="Banner Image" class="hero-img">
-        <div class="hero-text">
-            <h1>Bem-vindo à Minotauro Esportes!</h1>
-            <p>Onde atletas de alta performance encontram o melhor para alcançar seus limites e ir além. Desperte o campeão dentro de você com nossa linha exclusiva de suplementos premium, projetados para nutrir, fortalecer e transformar seu treino em resultados extraordinários.</p>
-            <button class="hero-btn">Explore Mais</button>
-        </div>
-    </div>
-</section>
-
+    <!--Produtos-->
     <div class="main-content">
-    <h2 class="products">Produtos em Destaque</h2>
+    <h2 class="products-title">Produtos em Destaque</h2>
     <div class="products">
         <div class="product-card">
             <img id="cocktail" src="assets/img/produtos/coqueteleirapreta.webp" alt="Produto 1">
             <h3>Coqueteleira SW</h3>
-            <p>Prepare suas bebidas e shakes de maneira prática e eficiente com a Coqueteleira SW. Com materiais de alta qualidade, ela oferece um design ergonômico e funcional.</p>
+            <p>Prepare suas bebidas e shakes de maneira prática e eficiente com a Coqueteleira SW.</p>
             <button class="buy-btn">Comprar Agora</button>
         </div>
         <div class="product-card">
             <img src="assets/img/produtos/creatina.jpeg" alt="Produto 2" id="creatina">
-            <h3>Creatina Integralmedica 300g</h3>
-            <p>É um suplemento de creatina monohidratada, essencial para quem busca melhorar seu desempenho atlético e aumentar a performance durante treinos de alta intensidade. Com a capacidade de fornecer energia extra aos músculos.</p>
+            <h3>Creatina 300g</h3>
+            <p>É um suplemento essencial para quem busca melhorar seu desempenho atlético e aumentar a performance durante treinos de alta intensidade.</p>
             <button class="buy-btn">Comprar Agora</button>
         </div>
         <div class="product-card">
             <img src="assets/img/produtos/trembolona.png" alt="Produto 3" id="trembolona">
-            <h3>Landerlan Drostanolona Trembolona Acetato</h3>
-            <p>É um poderoso esteroide anabolizante, frequentemente utilizado por atletas e bodybuilders que buscam aumento de força, massa muscular e desempenho em treinos intensos.</p>
+            <h3>Trembolona</h3>
+            <p>É um poderoso esteroide anabolizante para aqueles que buscam aumento de força, massa muscular e desempenho em treinos intensos.</p>
             <button class="buy-btn">Comprar Agora</button>
         </div>
         <div class="product-card">
             <img  src="assets/img/produtos/Durateston.jpeg" alt="Produto 4" id="durateston">
-            <h3>Durateston Plus Landerlan Gold</h3>
-            <p>É um suplemento de testosterona que combina diferentes ésteres para garantir uma liberação gradual do hormônio, maximizando ganhos musculares e força. Desenvolvido pela Landerlan.</p>
+            <h3>Durateston</h3>
+            <p>É um esteroide de testosterona que combina diferentes ésteres para garantir uma liberação gradual do hormônio, maximizando ganhos musculares e força.</p>
             <button class="buy-btn">Comprar Agora</button>
         </div>
     </div>
