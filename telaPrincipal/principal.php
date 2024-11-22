@@ -75,7 +75,21 @@
         </div>
     </div>
 </div>
-
+<div class="carrossel">
+    <div class="slides">
+        <div class="slide active">
+            <img src="assets/img/carrossel1.jpg" alt="Imagem 1">
+        </div>
+        <div class="slide">
+            <img src="assets/img/carrossel2.jpg" alt="Imagem 2">
+        </div>
+        <div class="slide">
+            <img src="assets/img/carrossel3.jpg" alt="Imagem 3">
+        </div>
+    </div>
+    <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
+    <button class="next" onclick="mudarSlide(1)">&#10095;</button>
+</div>
 <section class="reviews">
     <h2>Avaliações dos Clientes</h2>
     <div class="review-cards">
