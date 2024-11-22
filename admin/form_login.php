@@ -20,24 +20,16 @@
             <a href="principal.php"><img src="assets/img/etc/logo2.png" alt="Logo da Minotauro Esportes"
                     class="logo-img"></a>
         </div>
-        <ul class="nav-links">
-            <i class="fa-solid fa-user-secret"></i>
-            <li><a href="#">Perfil</a></li>
-            <li><a href="#">Comprar</a></li>
-            <li><a href="#fale-conosco">Contato</a></li>
-            <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
-    </ul>
     </nav>
 
     <div class="container">
         <div class="login">
             <h1>Login</h1>
-            <form action="recebe_login.php" method="post">
-                <input type="text" name="email" id="email" placeholder="Email">
+            <form action="login.php" method="post">
+                <input type="text" name="usuario" id="usuario" placeholder="usuario">
                 <input type="password" name="senha" id="senha" placeholder="Senha">
                 <button type="submit">Entrar</button>
             </form>
-            <a href="cadastro.php">Não tem uma conta? Cadastre-se</a>
         </div>
     </div>
 
