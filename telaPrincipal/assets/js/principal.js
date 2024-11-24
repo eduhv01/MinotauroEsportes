@@ -64,3 +64,28 @@ document.getElementById('search-input').addEventListener('input', filterSuggesti
 
 // Fecha as sugestões se o usuário clicar fora do campo de pesquisa
 document.addEventListener('click', hideSuggestions);
+
+let currentSlide = 0;  // Índice do slide atual
+
+// Função para mudar o slide
+function mudarSlide(direction) {
+    const slides = document.querySelectorAll('.slide');
+    const totalSlides = slides.length;
+
+    // Remove a classe "active" do slide atual
+    slides[currentSlide].classList.remove('active');
+
+    // Calcula o próximo slide com base na direção
+    currentSlide = (currentSlide + direction + totalSlides) % totalSlides;
+
+    // Adiciona a classe "active" ao próximo slide
+    slides[currentSlide].classList.add('active');
+}
+
+// Inicializa o carrossel, mostrando o primeiro slide
+document.addEventListener('DOMContentLoaded', function() {
+    const slides = document.querySelectorAll('.slide');
+    if (slides.length > 0) {
+        slides[0].classList.add('active');  // Exibe o primeiro slide
+    }
+});

@@ -78,13 +78,13 @@
 <div class="carrossel">
     <div class="slides">
         <div class="slide active">
-            <img src="assets/img/carrossel1.jpg" alt="Imagem 1">
+            <img src="https://imgproxy2.cdn-retailhub.com/rs:fit/q:75/w:1920/format:webp/plain/https://cdn-retailhub.com/max-titanium/f65ad236-2da3-464d-b636-c9a758584463.jpg" alt="Imagem 1">
         </div>
         <div class="slide">
-            <img src="assets/img/carrossel2.jpg" alt="Imagem 2">
+            <img src="https://imgproxy2.cdn-retailhub.com/rs:fit/q:75/w:1920/format:webp/plain/https://cdn-retailhub.com/max-titanium/d55e4dc7-cdb8-49fa-91f9-557201c209e4.jpg" alt="Imagem 2">
         </div>
         <div class="slide">
-            <img src="assets/img/carrossel3.jpg" alt="Imagem 3">
+            <img src="https://imgproxy2.cdn-retailhub.com/rs:fit/q:75/w:1920/format:webp/plain/https://cdn-retailhub.com/max-titanium/ff86246e-420e-46e3-99f8-6ec19ea28a21.jpg" alt="Imagem 3">
         </div>
     </div>
     <button class="prev" onclick="mudarSlide(-1)">&#10094;</button>
