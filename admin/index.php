@@ -31,7 +31,7 @@
         <a href="principal.php"><img src="assets/img/etc/logo.png" alt="Logo da Minotauro Esportes" class="logo-img" ></a>
     </div>
     <ul class="nav-links">
-        <li><a href="#">Produtos</a></li>
+        <li><a href="adminProdutos/admin-produtos.php">Produtos</a></li>
         <li><a href="#">Mensagens</a></li>
         <li><a href="sair.php">Sair</a></li>
     </ul>
