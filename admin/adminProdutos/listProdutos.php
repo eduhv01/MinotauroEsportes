@@ -18,7 +18,7 @@ if (mysqli_num_rows($result) == 0) {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Administração de Produtos</title>
-    <link rel="stylesheet" href="css/list_styles.css">
+    <link rel="stylesheet" href="css/lists_styles.css">
 </head>
 <body>
     <div class="container">
