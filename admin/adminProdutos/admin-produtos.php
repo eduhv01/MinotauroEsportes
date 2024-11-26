@@ -61,7 +61,7 @@ $result = $conn->query($sql);
             </a>
         </div>
         <ul class="nav-links">
-            <li><a href="#">HOME</a></li>
+             <li><a href="../index.php">HOME</a></li>
         </ul>
     </nav>
 
