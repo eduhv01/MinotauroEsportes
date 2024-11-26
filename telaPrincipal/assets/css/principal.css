@@ -338,7 +338,8 @@ html{
     display: flex;
     justify-content: center; 
     flex-wrap: wrap; 
-    gap: 20px; 
+    gap: 20px;
+    color: white;
 }
 
 .review-card {
@@ -380,6 +381,7 @@ html{
 }
 
 #speak {
+    color: white;
     margin: 0 auto 8px;
     background-color: #570702;
     border-top-left-radius: 10px;
