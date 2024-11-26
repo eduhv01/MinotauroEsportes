@@ -5,7 +5,6 @@
     font-family: 'Noto Sans', sans-serif;
 }
 
-/* Corpo */
 body {
     background-color: #101010;
     color: #fff;
@@ -16,7 +15,6 @@ body {
     height: 100vh;
 }
 
-/* Navegação */
 .navbar {
     display: flex;
     justify-content: space-between;
@@ -98,7 +96,6 @@ body {
     text-decoration: underline;
 }
 
-/* Rodapé */
 .footer {
     background-color: #0D0D0D;
     color: white;
@@ -123,16 +120,4 @@ body {
 
 .footer-links a:hover {
     color: #F21905;
-}
-
-/* Responsividade */
-@media (max-width: 768px) {
-    .login {
-        padding: 20px;
-        max-width: 90%;
-    }
-
-    .login h1 {
-        font-size: 28px;
-    }
 }
