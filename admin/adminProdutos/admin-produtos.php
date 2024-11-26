@@ -62,7 +62,6 @@ $result = $conn->query($sql);
         </div>
         <ul class="nav-links">
             <li><a href="#">HOME</a></li>
-            <li><a href="listProdutos.php">Lista de Produtos</a></li>
         </ul>
     </nav>
 
