@@ -71,7 +71,7 @@ $result = $conn->query($sql);
         <label>Nome:</label>
         <input type="text" name="nome" required placeholder="Nome">
         <label>Preço:</label>
-        <input type="text" name="preco" required placeholder="Preço">
+        <input id="preco" type="number" name="preco" required placeholder="Preço">
         <label>URL da Imagem:</label>
         <input type="text" name="imagem" placeholder="Imagem">
         <button type="submit" name="add">Adicionar Produto</button>
