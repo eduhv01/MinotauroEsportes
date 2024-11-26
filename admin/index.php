@@ -11,24 +11,12 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
 </head>
 
-<?php
 
-    include_once "sessao.php";
-
-    if (logado()) {
-        // Usuário está logado
-        echo "<p>Bem-vindo <b>$_SESSION[usuario]</b>!</p>";
-    } else {
-        header("Location: form_login.php");
-        exit();
-    }
-
-?>
 
 <body>
     <nav class="navbar">
     <div class="logo">
-        <a href="principal.php"><img src="assets/img/etc/logo.png" alt="Logo da Minotauro Esportes" class="logo-img" ></a>
+        <a href="principal.php"><img src="/MinotauroEsportes/telaPrincipal/assets/img/etc/logo.png" alt="Logo da Minotauro Esportes" class="logo-img" ></a>
     </div>
     <ul class="nav-links">
         <li><a href="adminProdutos/admin-produtos.php">Produtos</a></li>
@@ -36,6 +24,20 @@
         <li><a href="sair.php">Sair</a></li>
     </ul>
     </nav>
+
+    <?php
+
+    include_once "sessao.php";
+
+    if (logado()) {
+        // Usuário está logado
+        echo "<p class='gay123'>Bem-vindo <b>$_SESSION[usuario]</b>!</p>";
+    } else {
+        header("Location: form_login.php");
+        exit();
+    }
+
+?>
 
     <footer class="footer">
         <div class="footer-links">
@@ -48,3 +50,5 @@
     <script src="assets/js/principal.js"></script>
 </body>
 </html>
+
+
