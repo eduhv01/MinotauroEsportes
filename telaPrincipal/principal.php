@@ -106,10 +106,10 @@
 <section class="contact" id="fale-conosco">
     <h2 id="speak">Fale Conosco</h2>
     <div class="background">
-    <form class="contact-form">
-        <input type="text" placeholder="Seu Nome" required>
-        <input type="email" placeholder="Seu Email" required>
-        <textarea placeholder="Sua Mensagem" required></textarea>
+    <form class="contact-form" action="../admin/cadastra_cliente.php" method="post">
+        <input type="text" name="nome" placeholder="Seu Nome" required>
+        <input type="text" name="email" placeholder="Seu Email" required>
+        <input type="text" name="mensagem" placeholder="Sua Mensagem" required>
         <button type="submit">Enviar</button>
         <div class="icones">
         <i class="fa-brands fa-instagram" style="color: #df1507;"></i>
