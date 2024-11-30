@@ -26,18 +26,31 @@
     </nav>
 
     <?php
+        include_once("../config.php");
 
-    include_once "sessao.php";
-
-    if (logado()) {
-        // Usuário está logado
-        echo "<p class='bemvindo'>Bem-vindo <b>$_SESSION[usuario]</b>!</p>";
-    } else {
-        header("Location: form_login.php");
-        exit();
-    }
-
-?>
+        $sql = "SELECT * FROM mensagem";
+    
+        $query = mysqli_query($conexao,$sql);
+    
+        while($mensagem = mysqli_fetch_array($query)) {
+    
+            echo "
+            <div class='mensagem'>
+                <p><b>Nome:</b> $mensagem[nome]</p>
+                <p><b>Email:</b> $mensagem[email]</p>
+                <p><b>Mensagem:</b> $mensagem[mensagem]</p>
+                <form method='POST' action='excluir_mensagem.php'>
+                    <input type='hidden' name='id' value='$mensagem[id]'>
+                    <button type='submit'>Excluir</button>
+                </form>
+            </div>";
+            
+        }  
+    
+        if(!$query){
+            die("Connection failed.");
+        }
+    ?>
 
     <footer class="footer">
         <div class="footer-links">
@@ -50,5 +63,4 @@
     <script src="assets/js/principal.js"></script>
 </body>
 </html>
-
 

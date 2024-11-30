@@ -327,7 +327,14 @@ body {
     border-radius: 5px;
 }
 
-.gay123{
+.bemvindo{
     text-align: center;
     margin-bottom: 100px;
+}
+
+.mensagem {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    margin: auto;
 }
