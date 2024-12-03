@@ -87,31 +87,8 @@ function moveSlide(direction) {
     document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-// Função para exibir os produtos
-function displayProducts(products) {
-    const container = document.getElementById('products-container');
-    container.innerHTML = '';
-    products.forEach(product => {
-        const productCard = document.createElement('div');
-        productCard.classList.add('product-card');
-        
-        productCard.innerHTML = `
-            <img src="${product.imgSrc}" alt="${product.name}">
-            <h3>${product.name}</h3>
-            <p>${product.price}</p>
-            <button class="buy-button">Adicionar ao Carrinho</button>
-        `;
-
-        productCard.querySelector('.buy-button').addEventListener('click', function() {
-            alert(`${product.name} adicionado ao carrinho!`);
-        });
-        
-        container.appendChild(productCard);
-    });
-}
-
 function fetchProducts() {
-    fetch('fetch_produtos.php')
+    fetch('/MinotauroEsportes/telaPrincipal/telaProdutos/fetch_produtos.php')
         .then(response => response.json())
         .then(data => {
             if (data.status === "success" && data.products.length > 0) {
@@ -141,4 +118,23 @@ function fetchProducts() {
 }
 
 // Inicializa a busca dos produtos
-fetchProducts();
+fetchProducts()
+
+// Função para exibir os produtos
+function displayProducts(products) {
+    const container = document.getElementById('products-container');
+    container.innerHTML = '';
+    products.forEach(product => {
+        const productCard = document.createElement('div');
+        productCard.classList.add('product-card');
+        
+        productCard.innerHTML = `
+            <img src="${product.imgSrc}" alt="${product.name}">
+            <h3>${product.name}</h3>
+            <p>${product.price}</p>
+        `;
+        
+        container.appendChild(productCard);
+    });
+}
+
