@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Minotauro Esportes</title>
-    <link rel="stylesheet" href="produtosprodutos/css/produtos.css">
+    <link rel="stylesheet" href="/MinotauroEsportes/telaPrincipal/telaProdutos/produtosprodutos/css/produtos.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.0/css/all.min.css">
@@ -26,13 +26,6 @@
         </ul>
     </div>
     <ul class="nav-links">
-    <i class="fa-solid fa-user-secret"></i>
-        <li class="auth-link">
-            <div class="auth-container">
-                    <span class="register"><a href="telaLogin/cadastro.php">Cadastre-se </a></span>
-                    <span class="login"><a href="telaLogin/login.php">ou faça seu login</a></span>
-            </div>
-        </li>
         <li><a href="/MinotauroEsportes/telaPrincipal/telaProdutos/produtos.php">Comprar</a></li>
         <li><a href="#fale-conosco">Contato</a></li>
         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
@@ -54,7 +47,6 @@
         <div id="products-container" class="products-container">
             <!-- Produtos serão carregados -->
         </div>
-        <button id="load-more" class="load-more" onclick="loadMoreProducts()">Carregar mais</button>
     </div>
     </div>
 

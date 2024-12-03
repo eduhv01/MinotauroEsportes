@@ -254,6 +254,7 @@ button.next {
 }
 
 .product-card {
+    margin-left: 10%;
     background-color: white;
     padding: 15px;
     border-radius: 8px;
@@ -294,6 +295,7 @@ button.next {
 }
 
 .product-card {
+    margin-left: 10%;
     background-color: white;
     padding: 25px;
     border-radius: 8px;

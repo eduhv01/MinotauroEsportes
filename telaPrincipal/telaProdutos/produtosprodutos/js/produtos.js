@@ -87,42 +87,43 @@ function moveSlide(direction) {
     document.querySelector('.slides').style.transform = `translateX(-${currentIndex * slideWidth}px)`;
 }
 
-const allProducts = [
-    { name: 'Produto 1', price: 'R$ 100,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 2', price: 'R$ 120,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 3', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 4', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 5', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 6', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 7', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 8', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 9', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 10', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 11', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 12', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 13', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 14', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 15', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 16', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 17', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 18', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 19', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 20', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 21', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 22', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 23', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 24', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 25', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 26', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 27', price: 'R$ 80,00', imgSrc: 'https://via.placeholder.com/200' },
-    { name: 'Produto 28', price: 'R$ 150,00', imgSrc: 'https://via.placeholder.com/200' }
-];
+function fetchProducts() {
+    fetch('/MinotauroEsportes/telaPrincipal/telaProdutos/fetch_produtos.php')
+        .then(response => response.json())
+        .then(data => {
+            if (data.status === "success" && data.products.length > 0) {
+                console.log("Produtos carregados com sucesso:", data.products);
+                // const initialProducts = data.products.slice(0, displayedProducts);
+                displayProducts(data.products);
 
-let displayedProducts = 16;
+                // document.getElementById('load-more').addEventListener('click', () => {
+                //     const nextProducts = data.products.slice(displayedProducts, displayedProducts + 14);
+                //     displayProducts(nextProducts);
+                //     displayedProducts += nextProducts.length;
+
+                //     if (displayedProducts >= data.products.length) {
+                //         document.getElementById('load-more').style.display = 'none';
+                //     }
+                // });
+            } else {
+                console.error("Erro ao buscar produtos:", error);
+                document.getElementById('products-container').innerHTML = '<p>Nenhum produto disponível no momento.</p>';
+            }
+        })
+        .catch(error => {
+            console.error("Erro de requisição:", error);
+            document.getElementById('products-container').innerHTML = '<p>Erro ao carregar produtos. Por favor, tente novamente mais tarde.</p>';
+        });
+        
+}
+
+// Inicializa a busca dos produtos
+fetchProducts()
 
 // Função para exibir os produtos
 function displayProducts(products) {
     const container = document.getElementById('products-container');
+    container.innerHTML = '';
     products.forEach(product => {
         const productCard = document.createElement('div');
         productCard.classList.add('product-card');
@@ -136,23 +137,4 @@ function displayProducts(products) {
         container.appendChild(productCard);
     });
 }
-
-// Função para carregar mais produtos
-function loadMoreProducts() {
-    if (displayedProducts < allProducts.length) {
-        const nextProducts = allProducts.slice(displayedProducts, displayedProducts + 14);
-        displayProducts(nextProducts);
-        displayedProducts += nextProducts.length;
-
-        if (displayedProducts >= allProducts.length) {
-            document.getElementById('load-more').style.display = 'none';
-        }
-    }
-}
-
-displayProducts(allProducts.slice(0, 16));
-
-productCard.querySelector('.buy-button').addEventListener('click', function() {
-    alert('Produto adicionado ao carrinho!');
-});
 

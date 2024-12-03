@@ -26,13 +26,6 @@
         </ul>
     </div>
     <ul class="nav-links">
-    <i class="fa-solid fa-user-secret"></i>
-        <li class="auth-link">
-            <div class="auth-container">
-                    <span class="register"><a href="telaLogin/cadastro.php">Cadastre-se </a></span>
-                    <span class="login"><a href="telaLogin/login.php">ou faça seu login</a></span>
-            </div>
-        </li>
         <li><a href="telaProdutos/produtos.php">Comprar</a></li>
         <li><a href="#fale-conosco">Contato</a></li>
         <li><a href="#"><i class="fa-solid fa-cart-shopping"></i></a></li>
